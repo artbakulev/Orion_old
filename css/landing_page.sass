@@ -1,0 +1,87 @@
+@mixin center_absolute_position()
+  position: absolute
+  margin: auto
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.vertical_align
+  display: table-cell
+  vertical-align: middle
+
+.section
+  background-size: cover
+  text-align: center
+
+.slide
+  background-size: cover
+  text-align: center
+
+#jumbotron
+  background-image: url("../images/jumbotron_background.jpg")
+  position: relative
+  #jumbotron_line_opacity
+    +center_absolute_position
+    height: 30%
+    background-color: white
+    opacity: 0.9
+  #jumbotron_line
+    +center_absolute_position
+    height: 30%
+    display: flex
+    img
+      margin-top: -58px
+      height: 160px
+    .greeting
+      text-align: left
+      margin-left: -150px
+      margin-top: auto
+      margin-bottom: auto
+      color: white
+      display: flex
+      h1
+        color: black
+      small
+        color: darkgrey
+      .title
+        float: left
+      input
+        margin-top: auto
+        margin-bottom: auto
+        margin-left: 50px
+#projects
+  .fp-controlArrow
+    margin-left: 20px
+    margin-right: 20px
+  #text
+    background-color: black
+    h1
+      color: white
+      display: inline-block
+      padding: 10px
+      border: 10px solid rgba(255,193,7,.5)
+  .project
+    margin: auto
+    width: 30%
+    text-align: center
+    h1
+      color: white
+    p
+      width: 100%
+      color: white
+      text-align: justify
+    img
+      width: 100%
+      border-radius: 20px
+
+  #project1
+    background-color: darkviolet
+  #project2
+    background-color: #71dd8a
+
+#map
+  #yandex_map
+    width: 100%
+    height: 100%
+

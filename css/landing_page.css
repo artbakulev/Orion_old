@@ -1,0 +1,88 @@
+.vertical_align {
+  display: table-cell;
+  vertical-align: middle; }
+
+.section {
+  background-size: cover;
+  text-align: center; }
+
+.slide {
+  background-size: cover;
+  text-align: center; }
+
+#jumbotron {
+  background-image: url("../images/jumbotron_background.jpg");
+  position: relative; }
+  #jumbotron #jumbotron_line_opacity {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    background-color: white;
+    opacity: 0.9; }
+  #jumbotron #jumbotron_line {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    display: flex; }
+    #jumbotron #jumbotron_line img {
+      margin-top: -58px;
+      height: 160px; }
+    #jumbotron #jumbotron_line .greeting {
+      text-align: left;
+      margin-left: -150px;
+      margin-top: auto;
+      margin-bottom: auto;
+      color: white;
+      display: flex; }
+      #jumbotron #jumbotron_line .greeting h1 {
+        color: black; }
+      #jumbotron #jumbotron_line .greeting small {
+        color: darkgrey; }
+      #jumbotron #jumbotron_line .greeting .title {
+        float: left; }
+      #jumbotron #jumbotron_line .greeting input {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 50px; }
+
+#projects .fp-controlArrow {
+  margin-left: 20px;
+  margin-right: 20px; }
+#projects #text {
+  background-color: black; }
+  #projects #text h1 {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    border: 10px solid rgba(255, 193, 7, 0.5); }
+#projects .project {
+  margin: auto;
+  width: 30%;
+  text-align: center; }
+  #projects .project h1 {
+    color: white; }
+  #projects .project p {
+    width: 100%;
+    color: white;
+    text-align: justify; }
+  #projects .project img {
+    width: 100%;
+    border-radius: 20px; }
+#projects #project1 {
+  background-color: darkviolet; }
+#projects #project2 {
+  background-color: #71dd8a; }
+
+#map #yandex_map {
+  width: 100%;
+  height: 100%; }
+
+/*# sourceMappingURL=landing_page.css.map */

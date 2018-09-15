@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Orion | Advertising company</title>
+    <meta name="author" content="Artefakt-ff"/>
+    <meta name="description" content="Russian advertising company"/>
+    <meta name="keywords" content="markenting, Orion, advertise"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/landing_page.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = {
+            log: function () {
+            }
+        };
+    </script>
+    <![endif]-->
+</head>
+<body>
+<header></header>
+<div id="fullpage">
+    <div class="section" id="jumbotron">
+        <div id="jumbotron_line_opacity"></div>
+        <div id="jumbotron_line" class="container">
+            <img src="images/orion_logo.png">
+            <div class="greeting">
+                <div class="title">
+                    <h1>Orion | Рекламная компания</h1>
+                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam
+                        et rutrum.
+                    </small>
+                </div>
+                <input onclick="myFullpage.moveSectionDown()" type="button" class="btn btn-warning btn-lg"
+                       value="Заказать рекламу">
+            </div>
+
+        </div>
+    </div>
+    <div class="section" id="projects">
+        <div class="slide" id="text"><h1>Наши работы</h1></div>
+        <div class="slide" id="project1">
+            <div class="project intro">
+                <h1>Bubble Gum</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam et
+                    rutrum.
+                    Vestibulum mattis non risus in congue. Aliquam non lectus nec risus dignissim ornare vitae sit amet
+                    mauris. Nulla non malesuada est. Sed consectetur mauris sit amet sapien hendrerit sagittis. Aenean
+                    ut mi
+                    purus.</p>
+                <img src="images/project1.jpg">
+            </div>
+        </div>
+        <div class="slide" id="project2">
+            <div class="project intro">
+                <h1>Peppermint</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam et
+                    rutrum.
+                    Vestibulum mattis non risus in congue. Aliquam non lectus nec risus dignissim ornare vitae sit amet
+                    mauris. Nulla non malesuada est. Sed consectetur mauris sit amet sapien hendrerit sagittis. Aenean
+                    ut mi
+                    purus.</p>
+                <img src="images/project2.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="section" id="map">
+        <div id="yandex_map"></div>
+    </div>
+    <div class="section" id="reviews">
+        <div class="intro">
+            <h1>Reviews</h1>
+        </div>
+    </div>
+    <div class="section" id="contacts">
+        <div class="intro">
+            <h1>Contacts</h1>
+        </div>
+    </div>
+    <div class="section fp-auto-height" id="footer">
+        <div class="intro">
+            <h1>Footer</h1>
+        </div>
+    </div>
+
+</div>
+<footer></footer>
+</body>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage');
+</script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+
+    function init () {
+        // Создание экземпляра карты и его привязка к контейнеру с
+        // заданным id ("map").
+        myMap = new ymaps.Map('yandex_map', {
+            // При инициализации карты обязательно нужно указать
+            // её центр и коэффициент масштабирования.
+            center: [56.838011, 60.597465], // Москва
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        myMap.behaviors.disable('scrollZoom')
+    }
+</script>
+</html>
