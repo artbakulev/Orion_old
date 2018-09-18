@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 .vertical_align {
   display: table-cell;
   vertical-align: middle; }
+
+div, h1, h2, h3, h4, p {
+  font-family: "Oswald", sans-serif; }
 
 .section {
   background-size: cover;
@@ -10,79 +14,118 @@
   background-size: cover;
   text-align: center; }
 
+#sityChoice {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 7, 0.5);
+  position: absolute;
+  z-index: 100000;
+  display: flex; }
+  #sityChoice .form {
+    margin: auto;
+    width: 25vh;
+    height: 25vh; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Exo 2", sans-serif;
+  display: none; }
+  header a:hover {
+    cursor: pointer; }
+  header header {
+    background-image: url("../images/background_white_opacity.png"); }
+  header .navbar {
+    margin-top: 20px;
+    padding: 0; }
+    header .navbar .nav-item {
+      font-size: 24px; }
+  header img {
+    margin-left: 20px;
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: -20px; }
+
 #jumbotron {
   background-image: url("../images/jumbotron_background.jpg");
   position: relative; }
-  #jumbotron #jumbotron_line_opacity {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 30%;
-    background-color: white;
-    opacity: 0.9; }
-  #jumbotron #jumbotron_line {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 30%;
-    display: flex; }
-    #jumbotron #jumbotron_line img {
-      margin-top: -58px;
-      height: 160px; }
-    #jumbotron #jumbotron_line .greeting {
-      text-align: left;
-      margin-left: -150px;
-      margin-top: auto;
-      margin-bottom: auto;
-      color: white;
-      display: flex; }
-      #jumbotron #jumbotron_line .greeting h1 {
-        color: black; }
-      #jumbotron #jumbotron_line .greeting small {
-        color: darkgrey; }
-      #jumbotron #jumbotron_line .greeting .title {
-        float: left; }
-      #jumbotron #jumbotron_line .greeting input {
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-left: 50px; }
+  #jumbotron #jumbotron_square {
+    padding: 0 50px 50px 50px;
+    display: inline-block;
+    border-radius: 25px;
+    min-width: 30vh;
+    min-height: 30vh;
+    background-image: url("../images/background_white_opacity.png"); }
+    #jumbotron #jumbotron_square img {
+      width: 30vh;
+      margin: 40px 0 40px 0;
+      display: inline; }
+    #jumbotron #jumbotron_square h4 {
+      background-color: rgba(255, 193, 7, 0.5); }
+    #jumbotron #jumbotron_square .buttons .btn {
+      min-width: 110px; }
+    #jumbotron #jumbotron_square .buttons h5 {
+      margin-right: 40px;
+      margin-left: 40px;
+      display: inline-block; }
 
-#projects .fp-controlArrow {
-  margin-left: 20px;
-  margin-right: 20px; }
-#projects #text {
-  background-color: black; }
-  #projects #text h1 {
-    color: white;
+#projects {
+  background: url("../images/background_orange_lines.jpg") repeat;
+  background-size: 150px;
+  scrollbar-face-color: rgba(0, 0, 0, 0); }
+  #projects .card {
+    margin: 20px 0 20px 0; }
+  #projects .fp-tableCell {
+    vertical-align: top; }
+  #projects h1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
     display: inline-block;
     padding: 10px;
+    margin: 40px;
     border: 10px solid rgba(255, 193, 7, 0.5); }
-#projects .project {
-  margin: auto;
-  width: 30%;
-  text-align: center; }
-  #projects .project h1 {
-    color: white; }
-  #projects .project p {
-    width: 100%;
-    color: white;
-    text-align: justify; }
-  #projects .project img {
-    width: 100%;
-    border-radius: 20px; }
-#projects #project1 {
-  background-color: darkviolet; }
-#projects #project2 {
-  background-color: #71dd8a; }
+  #projects .fp-controlArrow {
+    border-right-color: rgba(255, 193, 7, 0.5);
+    border-left-color: rgba(255, 193, 7, 0.5);
+    margin-left: 20px;
+    margin-right: 20px; }
+  #projects .project {
+    margin: auto;
+    width: 30%;
+    text-align: center; }
+    #projects .project p {
+      width: 100%;
+      color: white;
+      text-align: justify; }
+    #projects .project img {
+      width: 100%;
+      border-radius: 20px; }
 
-#map #yandex_map {
+#map iframe {
   width: 100%;
   height: 100%; }
+
+#contacts {
+  background-color: black; }
+  #contacts .container .row #text {
+    color: white;
+    padding: 40px;
+    text-align: center; }
+  #contacts .container .row #form {
+    color: white;
+    background-color: rgba(255, 193, 7, 0.5);
+    padding: 40px;
+    border-radius: 25px; }
+    #contacts .container .row #form img {
+      width: 50%; }
+
+#footer {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  #footer .col-md-4:first-child {
+    text-align: left; }
+  #footer .col-md-4:last-child {
+    text-align: right; }
 
 /*# sourceMappingURL=landing_page.css.map */

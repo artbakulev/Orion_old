@@ -5,14 +5,13 @@
     <title>Orion | Advertising company</title>
     <meta name="author" content="Artefakt-ff"/>
     <meta name="description" content="Russian advertising company"/>
-    <meta name="keywords" content="markenting, Orion, advertise"/>
+    <meta name="keywords" content="marketing, Orion, advertise"/>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/landing_page.css">
-    <link rel="stylesheet" href="css/main.css">
     <!--[if IE]>
     <script type="text/javascript">
         var console = {
@@ -22,95 +21,416 @@
     </script>
     <![endif]-->
 </head>
+<div id="sityChoice">
+    <div class="form">
+        <h4>Пожалуйста выберите свой город:</h4>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="ekaterinburg" autocomplete="off" checked> Екатеринбург
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="tumen" autocomplete="off"> Тюмень
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="another" autocomplete="off"> Другой
+            </label>
+        </div>
+        <br>
+        <button class="btn btn-warning">Выбрать</button>
+    </div>
+</div>
 <body>
-<header></header>
+
+<header style="display: none">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/orion_logo.png" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" onclick="myFullpage.moveTo(1)">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="myFullpage.moveTo(2)">Что мы делаем</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="myFullpage.moveTo(3)">Где мы размещаем рекламу</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 <div id="fullpage">
     <div class="section" id="jumbotron">
-        <div id="jumbotron_line_opacity"></div>
-        <div id="jumbotron_line" class="container">
+        <div id="jumbotron_square">
             <img src="images/orion_logo.png">
-            <div class="greeting">
-                <div class="title">
-                    <h1>Orion | Рекламная компания</h1>
-                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam
-                        et rutrum.
-                    </small>
-                </div>
-                <input onclick="myFullpage.moveSectionDown()" type="button" class="btn btn-warning btn-lg"
-                       value="Заказать рекламу">
+            <h4>Что вы хотите?</h4>
+            <hr>
+            <div class="buttons">
+                <div onclick="myFullpage.moveTo(2)" class="btn btn-warning btn-lg">Заказать<br>Рекламу</div>
+                <h5>ИЛИ</h5>
+                <div onclick="myFullpage.moveTo(3)" class="btn btn-warning btn-lg">Разместить<br>Рекламу</div>
             </div>
-
+            <hr>
         </div>
     </div>
     <div class="section" id="projects">
-        <div class="slide" id="text"><h1>Наши работы</h1></div>
-        <div class="slide" id="project1">
-            <div class="project intro">
-                <h1>Bubble Gum</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam et
-                    rutrum.
-                    Vestibulum mattis non risus in congue. Aliquam non lectus nec risus dignissim ornare vitae sit amet
-                    mauris. Nulla non malesuada est. Sed consectetur mauris sit amet sapien hendrerit sagittis. Aenean
-                    ut mi
-                    purus.</p>
-                <img src="images/project1.jpg">
+        <div class="slide" id="sites">
+            <h1>Разработка и обслуживание сайтов</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="slide" id="project2">
-            <div class="project intro">
-                <h1>Peppermint</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper iaculis diam et
-                    rutrum.
-                    Vestibulum mattis non risus in congue. Aliquam non lectus nec risus dignissim ornare vitae sit amet
-                    mauris. Nulla non malesuada est. Sed consectetur mauris sit amet sapien hendrerit sagittis. Aenean
-                    ut mi
-                    purus.</p>
-                <img src="images/project2.jpg">
+        <div class="slide" id="apps">
+            <h1>Разработка мобильных приложений</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="slide" id="adverbs">
+            <h1>Изготовление рекламы под ключ</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="images/project1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="section" id="map">
-        <div id="yandex_map"></div>
+        <!--<script type="text/javascript" charset="utf-8" async-->
+                <!--src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace7658c9633eb020d8b973d19cd20621b918f053a78df903c6b817d3bca17375&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>-->
     </div>
-    <div class="section" id="reviews">
-        <div class="intro">
-            <h1>Reviews</h1>
-        </div>
-    </div>
+    <!--<div class="section" id="reviews">-->
+    <!--<div class="intro">-->
+    <!--<h1>Reviews</h1>-->
+    <!--</div>-->
+    <!--</div>-->
     <div class="section" id="contacts">
-        <div class="intro">
-            <h1>Contacts</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="text">
+
+                    <h2>
+                        Кто мы?
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis rhoncus mi quis feugiat.
+                        Ut convallis erat ut quam sodales dapibus. Duis rutrum egestas tincidunt. Cras ut purus at
+                        ligula molestie rhoncus. Aliquam id tempus enim. Morbi blandit rutrum massa eget cursus. Cras at
+                        viverra quam, sit amet mattis elit. Sed a urna et lorem mollis suscipit. Duis gravida ultrices
+                        aliquet. Curabitur et ex varius, pharetra turpis eget, laoreet arcu. Phasellus et augue
+                        facilisis, convallis eros sit amet, consectetur mauris. In hac habitasse platea dictumst. Sed ac
+                        orci accumsan, bibendum leo ac, pharetra nisl.
+                    </p>
+                </div>
+                <div class="col-md-6" id="form">
+                    <img src="images/orion_logo.png">
+                    <h4>Начните прямо сейчас!</h4>
+                    <p>Оставьте заявку и мы свяжемся с Вами в ближайшее время.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Имя</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Введите Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email адрес</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Введите Ваш email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">Номер телефона</label>
+                            <input type="tel" class="form-control" id="inputPhone"
+                                   placeholder="Введите Ваш номер телефона">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputService">Выберите услугу</label>
+                            <select id="inputService" class="form-control">
+                                <option selected>Разработка и обслуживание сайтов</option>
+                                <option>Разработка мобильных приложений</option>
+                                <option>Изготовление рекламы под ключ</option>
+                                <option>Размещение рекламы</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Получать информацию об акциях и
+                                скидках</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <div class="section fp-auto-height" id="footer">
-        <div class="intro">
-            <h1>Footer</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" id="aboutCompany">
+                    <small>Изготовление и размещение рекламы в Екатеринбурге и Тюмени <br> Рекламная группа Orion
+                    </small>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4" id="aboutDeveloper">
+                    <small> Разработано <a href="http://artbakulev.me" target="_blank">artbakulev.me</a></small>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
-<footer></footer>
 </body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/fullpage_vendor_overflow.js"></script>
 <script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
-    var myFullpage = new fullpage('#fullpage');
+    var myFullpage = new fullpage('#fullpage', {scrollOverflow: true});
 </script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>-->
 <script>
     var myMap;
 
     // Дождёмся загрузки API и готовности DOM.
     ymaps.ready(init);
 
-    function init () {
+    function init() {
         // Создание экземпляра карты и его привязка к контейнеру с
         // заданным id ("map").
         myMap = new ymaps.Map('yandex_map', {
             // При инициализации карты обязательно нужно указать
             // её центр и коэффициент масштабирования.
-            center: [56.838011, 60.597465], // Москва
+            center: [56.838011, 60.597465], // Екатеринбург
             zoom: 10
         }, {
             searchControlProvider: 'yandex#search'
@@ -118,4 +438,5 @@
         myMap.behaviors.disable('scrollZoom')
     }
 </script>
+<script src="js/menu_scrolling.js" type="text/javascript"></script>
 </html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald')
 @mixin center_absolute_position()
   position: absolute
   margin: auto
@@ -10,6 +11,9 @@
   display: table-cell
   vertical-align: middle
 
+div, h1, h2, h3, h4, p
+  font-family: 'Oswald', sans-serif
+
 .section
   background-size: cover
   text-align: center
@@ -18,55 +22,91 @@
   background-size: cover
   text-align: center
 
+#sityChoice
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 7, .5)
+  position: absolute
+  z-index: 100000
+  display: flex
+
+  .form
+    margin: auto
+    width: 25vh
+    height: 25vh
+
+header
+  position: fixed
+  width: 100%
+  z-index: 1000
+  font-family: 'Exo 2', sans-serif
+  a:hover
+    cursor: pointer
+  header
+    background-image: url('../images/background_white_opacity.png')
+  .navbar
+    margin-top: 20px
+    padding: 0
+
+    .nav-item
+      font-size: 24px
+  img
+    margin-left: 20px
+    width: 100%
+    margin-top: -20px
+    margin-bottom: -20px
+  display: none
+
 #jumbotron
   background-image: url("../images/jumbotron_background.jpg")
   position: relative
-  #jumbotron_line_opacity
-    +center_absolute_position
-    height: 30%
-    background-color: white
-    opacity: 0.9
-  #jumbotron_line
-    +center_absolute_position
-    height: 30%
-    display: flex
+  #jumbotron_square
+    padding: 0 50px 50px 50px
+    display: inline-block
+    border-radius: 25px
+    min-width: 30vh
+    min-height: 30vh
+    background-image: url('../images/background_white_opacity.png')
     img
-      margin-top: -58px
-      height: 160px
-    .greeting
-      text-align: left
-      margin-left: -150px
-      margin-top: auto
-      margin-bottom: auto
-      color: white
-      display: flex
-      h1
-        color: black
-      small
-        color: darkgrey
-      .title
-        float: left
-      input
-        margin-top: auto
-        margin-bottom: auto
-        margin-left: 50px
+      width: 30vh
+      margin: 40px 0 40px 0
+      display: inline
+    h4
+      background-color: rgba(255, 193, 7, .5)
+    .buttons
+      .btn
+        min-width: 110px
+      h5
+        margin-right: 40px
+        margin-left: 40px
+        display: inline-block
+
 #projects
+  background: url('../images/background_orange_lines.jpg')  repeat
+  background-size: 150px
+  scrollbar-face-color: rgba(0, 0, 0, 0)
+  .card
+    margin: 20px 0 20px 0
+  .fp-tableCell
+    vertical-align: top
+  h1
+    background-color: rgba(255, 255, 255, .8)
+    color: black
+    display: inline-block
+    padding: 10px
+    margin: 40px
+    border: 10px solid rgba(255, 193, 7, .5)
   .fp-controlArrow
+    border-right-color: rgba(255, 193, 7, .5)
+    border-left-color: rgba(255, 193, 7, .5)
     margin-left: 20px
     margin-right: 20px
-  #text
-    background-color: black
-    h1
-      color: white
-      display: inline-block
-      padding: 10px
-      border: 10px solid rgba(255,193,7,.5)
+
+
   .project
     margin: auto
     width: 30%
     text-align: center
-    h1
-      color: white
     p
       width: 100%
       color: white
@@ -75,13 +115,34 @@
       width: 100%
       border-radius: 20px
 
-  #project1
-    background-color: darkviolet
-  #project2
-    background-color: #71dd8a
+
 
 #map
-  #yandex_map
+  iframe
     width: 100%
     height: 100%
 
+
+#contacts
+  background-color: black
+  .container
+    .row
+      #text
+        color: white
+        padding: 40px
+        text-align: center
+      #form
+        color: white
+        background-color: rgba(255, 193, 7, .5)
+        padding: 40px
+        border-radius: 25px
+        img
+          width: 50%
+
+#footer
+  padding-top: 50px
+  padding-bottom: 50px
+  .col-md-4:first-child
+    text-align: left
+  .col-md-4:last-child
+    text-align: right
