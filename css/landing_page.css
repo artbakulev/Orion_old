@@ -22,9 +22,18 @@ div, h1, h2, h3, h4, p {
   z-index: 100000;
   display: flex; }
   #sityChoice .form {
+    background-color: #ffc107;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
     margin: auto;
-    width: 25vh;
-    height: 25vh; }
+    min-width: 50vh; }
+    #sityChoice .form h4 {
+      margin-bottom: 20px; }
+    #sityChoice .form .btn {
+      font-size: 18px; }
+    #sityChoice .form #choiceButton {
+      margin-top: 20px; }
 
 header {
   position: fixed;
@@ -105,6 +114,10 @@ header {
 #map iframe {
   width: 100%;
   height: 100%; }
+#map #ekaterinburg_map {
+  display: block; }
+#map #tumen_map {
+  display: none; }
 
 #contacts {
   background-color: black; }

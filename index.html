@@ -24,7 +24,7 @@
 <div id="sityChoice">
     <div class="form">
         <h4>Пожалуйста выберите свой город:</h4>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <form class="btn-group btn-group-toggle" id="checkList" data-toggle="buttons">
             <label class="btn btn-secondary active">
                 <input type="radio" name="options" id="ekaterinburg" autocomplete="off" checked> Екатеринбург
             </label>
@@ -34,9 +34,10 @@
             <label class="btn btn-secondary">
                 <input type="radio" name="options" id="another" autocomplete="off"> Другой
             </label>
-        </div>
+        </form>
         <br>
-        <button class="btn btn-warning">Выбрать</button>
+        <button id="choiceButton" onclick="chooseCity()" class="btn btn-dark">Выбрать</button>
+
     </div>
 </div>
 <body>
@@ -313,8 +314,14 @@
 
     </div>
     <div class="section" id="map">
-        <!--<script type="text/javascript" charset="utf-8" async-->
-                <!--src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace7658c9633eb020d8b973d19cd20621b918f053a78df903c6b817d3bca17375&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>-->
+        <div id="ekaterinburg_map">
+            <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ace7658c9633eb020d8b973d19cd20621b918f053a78df903c6b817d3bca17375&amp;width=100%25&amp;height=100vh&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <div id="tumen_map">
+            <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A34c414212e96ade5646bed9082903d0c25c8529195911624bc78bff463cd47e2&amp;width=100%25&amp;height=100vh&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
     </div>
     <!--<div class="section" id="reviews">-->
     <!--<div class="intro">-->
@@ -414,6 +421,7 @@
 
 <script type="text/javascript" src="js/fullpage_vendor_overflow.js"></script>
 <script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript" src="js/chooseCity.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {scrollOverflow: true});
 </script>
